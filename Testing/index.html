@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni Portal</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="Relogo.png" alt="Logo">
+        <span>Alumni Portal</span>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#directory">Directory</a></li>
+        <li><a href="#feed">Community Feed</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#profile">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to the Alumni Portal</h1>
+      <p>Stay connected, celebrate achievements, and grow together.</p>
+      <a href="#directory" class="btn">Explore Alumni</a>
+    </div>
+  </section>
+
+  <section class="highlights">
+    <h2>Our Alumni Network</h2>
+    <div class="cards">
+      <div class="card"><h3>5000+</h3><p>Registered Alumni</p></div>
+      <div class="card"><h3>120+</h3><p>Countries Represented</p></div>
+      <div class="card"><h3>1000+</h3><p>Successful Startups</p></div>
+    </div>
+  </section>
+
+  <!-- Directory -->
+  <section id="directory" class="directory">
+    <h2>Alumni Directory</h2>
+    <input type="text" id="searchInput" placeholder="Search by name, batch, or profession...">
+    <div class="alumni-list" id="alumniList">
+      <div class="alumni-card"><img src="Student1.png"><h3>Rahul Sharma</h3><p><b>Batch:</b> 2015</p><p><b>Profession:</b> Software Engineer</p></div>
+      <div class="alumni-card"><img src="student3.png"><h3>Anjali Verma</h3><p><b>Batch:</b> 2018</p><p><b>Profession:</b> Data Scientist</p></div>
+      <div class="alumni-card"><img src="student2.png"><h3>Arjun Patel</h3><p><b>Batch:</b> 2020</p><p><b>Profession:</b> Entrepreneur</p></div>
+    </div>
+  </section>
+
+  <!-- Feed -->
+  <section id="feed" class="feed">
+    <h2>Community Feed</h2>
+    <div class="create-post">
+      <textarea id="postInput" placeholder="Share an update..."></textarea>
+      <button id="postBtn" class="btn">Post</button>
+    </div>
+    <div id="postsContainer" class="posts">
+      <div class="post">
+        <h3>Rahul Sharma</h3>
+        <p>Excited to announce I’ve started a new role at Google!</p>
+        <div class="post-actions">
+          <button class="like-btn">👍 Like (<span class="like-count">0</span>)</button>
+          <button class="comment-btn">💬 Comment</button>
+          <button class="share-btn">🔗 Share</button>
+        </div>
+        <div class="comments"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="achievements">
+    <h2>Alumni Achievements</h2>
+    <button id="addAchievementBtn" class="btn">+ Add Achievement</button>
+    <div id="achievementList" class="achievement-list">
+      <div class="achievement"><h3>Rahul Sharma</h3><p>🏆 Awarded “Best Innovator 2023”</p></div>
+      <div class="achievement"><h3>Anjali Verma</h3><p>🚀 Founded AI startup “DataVision”</p></div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="achievementModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Add New Achievement</h3>
+      <form id="achievementForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <textarea id="achievementText" placeholder="Describe your achievement..." required></textarea>
+        <button type="submit" class="btn">Add</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Profile -->
+  <section id="profile" class="profile">
+    <h2>Edit Profile</h2>
+    <div class="profile-container">
+      <form id="profileForm" class="profile-form">
+        <label>Full Name</label><input type="text" id="profileName" required>
+        <label>Email</label><input type="email" id="profileEmail" required>
+        <label>Batch</label><input type="text" id="profileBatch" required>
+        <label>Profession</label><input type="text" id="profileProfession" required>
+        <label>Bio</label><textarea id="profileBio"></textarea>
+        <label>Profile Picture</label><input type="file" id="profilePic" accept="image/*">
+        <button type="submit" class="btn">Save Profile</button>
+      </form>
+      <div class="profile-preview">
+        <img src="default_profile.png" id="previewPic">
+        <h3 id="previewName">Your Name</h3>
+        <p id="previewBatch">Batch: -</p>
+        <p id="previewProfession">Profession: -</p>
+        <p id="previewEmail">Email: -</p>
+        <p id="previewBio">Bio: -</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="test.js"></script>
+</body>
+</html>
